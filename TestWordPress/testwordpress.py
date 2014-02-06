@@ -25,8 +25,11 @@ class WordPressTestCase(unittest.TestCase):
 
     def login(self):
         self.dr.get(self.login_url)
+        time.sleep(5)
         self.dr.find_element_by_name('log').clear()
+        time.sleep(5)
         self.dr.find_element_by_name('log').send_keys('root')
+        time.sleep(5)
         self.dr.find_element_by_name('pwd').send_keys('123456roy')
         self.dr.find_element_by_name('wp-submit').click()
 
