@@ -1,0 +1,12 @@
+
+dfsfdsfs
+ 1.wordpress 要能增删改查。
+
+2.login 要参数提取出来。
+
+3.笨办法学python 45 个用例。
+
+4.结果传送到github上。
+
+5.挑战，更多的wordpress的测试。
+
