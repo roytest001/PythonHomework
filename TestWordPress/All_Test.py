@@ -6,7 +6,7 @@ import HTMLTestRunner
 import time
 import AllCase_List
 
-now = time.strftime("%Y-%m-%M-%H_%M_%S",time.localtime(time.time()))
+now = time.strftime("%Y-%m-%d-%H_%M_%S",time.localtime(time.time()))
 alltestnames = AllCase_List.caselist()
 testunit = unittest.TestSuite()
 for test in alltestnames:

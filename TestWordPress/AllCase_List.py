@@ -6,7 +6,6 @@ import WordPress
 
 def caselist():
     alltestnames = [WordPress.WordPressTestCase]
-    print alltestnames
     print "success  read case list!!"
     return alltestnames
 
