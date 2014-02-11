@@ -1,38 +1,69 @@
-# coding=utf-8
+from sys import exit
+from random import randint
+
+def death():
+    quips = ["You died.  You kinda suck at this.",
+             "Nice job, you died ...jackass.",
+             "Such a luser.",
+             "I have a small puppy that's better at this."]
+
+    print quips[randint(0, len(quips)-1)]
+    exit(1)
 
 
-class Room(object):
+def central_corridor():
 
-    """docstring for Room"""
+    action = raw_input("> ")
 
-    def __init__(self, length, width, height):
-        self.length = length
-        self.width = width
-        self.height = height
+    if action == "shoot!":
+      
+        return 'death'
 
-    def area(self):
-        return self.length * self.width
+    elif action == "dodge!":
+        return 'death'
 
-    def volume(self):
-        return self.length * self.width * self.height
+    elif action == "tell a joke":
+        return 'laser_weapon_armory'
 
-    def function(self):
-        print " room's purpose "
+    else:
+        print "DOES NOT COMPUTE!"
+        return 'central_corridor'
+
+def laser_weapon_armory():
+    code = "%d%d%d" % (randint(1,9), randint(1,9), randint(1,9))
+    guess = raw_input("[keypad]> ")
+    guesses = 0
+
+    while guess != code and guesses < 10:
+        print "BZZZZEDDD!"
+        guesses += 1
+        guess = raw_input("[keypad]> ")
+
+    if guess == code:
+        return 'the_bridge'
+    else:
+        return 'death'
 
 
-class goldroom(Room):
+def the_bridge():
+    action = raw_input("> ")
 
-    def __init__(self, length, width, height, stores):
-        super(goldroom, self).__init__(length, width, height)
-        self.stores = stores
+    if action == "throw the bomb":
+        return 'death'
 
-    def function(self):
-        print "goldroom stores many goods!!!!"
-        print "goldroom test"
+    elif action == "slowly place the bomb":
+        return 'escape_pod'
+    else:
+        print "DOES NOT COMPUTE!"
+        return "the_bridge"
 
-a = goldroom(4, 5, 6, "golds")
+def escape_pod():
 
-print a.stores
-print a.area()
-print a.volume()
-print a.function()
+    good_pod = randint(1,5)
+    guess = raw_input("[pod #]> ")
+
+
+    if int(guess) != good_pod:
+        return 'death'
+    else:
+        exit(0)
