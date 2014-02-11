@@ -1,7 +1,6 @@
 #coding=utf-8
-
 import unittest
-import WordPress
+#import WordPress
 import HTMLTestRunner
 import time
 import AllCase_List
@@ -15,6 +14,7 @@ for test in alltestnames:
 
 filename = 'C:\\TestReports\\'+now+'_result.html'
 
+
 fp = file(filename, 'wb')
 
 runner = HTMLTestRunner.HTMLTestRunner(
@@ -23,5 +23,3 @@ runner = HTMLTestRunner.HTMLTestRunner(
     description = 'Test Case Result:')
 
 runner.run(testunit)
-
-

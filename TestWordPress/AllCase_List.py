@@ -9,4 +9,3 @@ def caselist():
     print "success  read case list!!"
     return alltestnames
 
-caselist()

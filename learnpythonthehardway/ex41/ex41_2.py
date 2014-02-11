@@ -41,4 +41,8 @@ rover = Dog("Rover")
 satan = Cat("Satan")
 ## ??
 mary = Person("Mary")
-## ??
+print mary.name
+roy = Employee("Roy", 500)
+
+print roy.name
+print roy.salary

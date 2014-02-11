@@ -7,6 +7,11 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 
+import sys
+sys.path.append("\public")
+from public import login
+from public import quit_login
+
 class WordPressTestCase(unittest.TestCase):
     dr = None
     login_url = 'http://localhost/wordpress/wp-login.php'
@@ -19,13 +24,13 @@ class WordPressTestCase(unittest.TestCase):
 
     def test_1_login(self):
         """test login"""
-        self.login(self.usrname, self.pswd)
+        login.login(self.dr, self.usrname, self.pswd)
         print self.dr.current_url
         self.assertTrue('wp-admin' in self.dr.current_url)
 
     def test_2_create_post(self):
         """test create_post"""    
-        self.login(self.usrname, self.pswd)
+        login.login(self.dr, self.usrname, self.pswd)
         title = self.creat_post()
         print "title:" + title
         self.dr.get(self.post_list_url)
@@ -35,7 +40,7 @@ class WordPressTestCase(unittest.TestCase):
 
     def test_3_modify_articles(self):     
         """modify articles"""
-        self.login(self.usrname, self.pswd)
+        login.login(self.dr, self.usrname, self.pswd)
         time.sleep(2)
         self.dr.find_element_by_xpath("/html/body/div//div[2]/ul/li[3]/a/div[3]").click()
         move = self.dr.find_element_by_xpath("/html/body/div/div[3]/div[2]/div/div[3]/form/table/tbody/tr/td/strong/a")
@@ -60,7 +65,7 @@ class WordPressTestCase(unittest.TestCase):
  
     def test_5_del_all_articles(self):
         """test del_all_articles"""
-        self.login(self.usrname, self.pswd)   
+        self.login(self.dr, self.usrname, self.pswd)   
         time.sleep(2)
         self.dr.find_element_by_xpath("/html/body/div//div[2]/ul/li[3]/a/div[3]").click()
         time.sleep(2)      
@@ -72,17 +77,6 @@ class WordPressTestCase(unittest.TestCase):
         self.dr.find_element_by_id('doaction').click()
         time.sleep(5)
 
-
-    def login(self, username, password):
-        self.dr.get(self.login_url)
-        time.sleep(3)
-        self.dr.find_element_by_name('log').clear()
-        time.sleep(3)
-        self.dr.find_element_by_name('log').send_keys(username)
-        time.sleep(3)
-        self.dr.find_element_by_name('pwd').send_keys(password)
-        self.dr.find_element_by_name('wp-submit').click()
-        self.dr.maximize_window()
 
     def creat_post(self):
         create_post_url = 'http://localhost/wordpress/wp-admin/post-new.php'
@@ -97,7 +91,8 @@ class WordPressTestCase(unittest.TestCase):
     
     def tearDown(self):
         sleep(3)
-        self.dr.quit()
+        quit_login.quit_login(self.dr)
+        
 
 if __name__ == '__main__':
     unittest.main()
