@@ -12,12 +12,6 @@ ROOMS = {
 }
 
 
-def runner(map, start):
-    next = start
-    print central_corridor.__doc__
-    while True:
-        room = map[next]
-        print "\n--------"
-        next = room()
 
-runner(ROOMS, 'central_corridor')
+
+room.runner(ROOMS, 'central_corridor')

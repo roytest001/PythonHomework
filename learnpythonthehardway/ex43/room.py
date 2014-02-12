@@ -67,3 +67,11 @@ def escape_pod():
         return 'death'
     else:
         exit(0)
+        
+def runner(map, start):
+    next = start
+    print central_corridor.__doc__
+    while True:
+        room = map[next]
+        print "\n--------"
+        next = room()
