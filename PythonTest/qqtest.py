@@ -1,4 +1,11 @@
 #coding=utf-8
+
+'''
+随机测试
+打开连接
+http://sports.qq.com/seriea/
+打印国米板块右侧所有的新闻标题和内容
+'''
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
