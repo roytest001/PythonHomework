@@ -12,8 +12,8 @@ class TextField(object):
         self.dr = dr
         self.ele = ele
 
-    def set(self):
-        self.ele.send_keys("HelloWord!!!")
+    def set(self, comments):
+        self.ele.send_keys(comments)
         
     def clear(self):
         self.ele.clear()
@@ -38,7 +38,7 @@ ele = dr.find_element_by_id('tf')
 
 tf = TextField(dr,ele)
 time.sleep(3)
-tf.set()
+tf.set("Hellowrd!!!")
 time.sleep(3)
 tf.clear()
 time.sleep(3)
