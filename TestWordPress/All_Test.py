@@ -4,6 +4,8 @@ import unittest
 import HTMLTestRunner
 import time
 import AllCase_List
+import logging
+
 
 now = time.strftime("%Y-%m-%d-%H_%M_%S",time.localtime(time.time()))
 alltestnames = AllCase_List.caselist()
