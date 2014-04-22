@@ -10,3 +10,5 @@ a. examples for learn python by hard way
 b. unit test for testing wordpress
 
 c. add Automation Codes under this floder
+
+d. add description for master
