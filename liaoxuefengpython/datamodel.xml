@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<InternetGatewayDevice. n="IGD" t="staticObject">
+<DeviceSummary ml="1024" rw="R" t="string" v=""></DeviceSummary>
+<LANDeviceNumberOfEntries rw="R" t="unsignedInt" v=""></LANDeviceNumberOfEntries>
+<WANDeviceNumberOfEntries rw="R" t="unsignedInt" v=""></WANDeviceNumberOfEntries>
+<X_ASB_COM_Language ml="8" rw="RW" t="string" v=""></X_ASB_COM_Language>
+<IPv4DownloadDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv4DownloadDiagnosticsSupported>
+<IPv6DownloadDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv6DownloadDiagnosticsSupported>
+<IPv4UploadDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv4UploadDiagnosticsSupported>
+<IPv6UploadDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv6UploadDiagnosticsSupported>
+<IPv4UDPEchoDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv4UDPEchoDiagnosticsSupported>
+<IPv6UDPEchoDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv6UDPEchoDiagnosticsSupported>
+<IPv4ServerSelectionDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv4ServerSelectionDiagnosticsSupported>
+<IPv6ServerSelectionDiagnosticsSupported dv="TRUE" rw="R" t="boolean" v="TRUE"></IPv6ServerSelectionDiagnosticsSupported>
+<X_ALU-COM_RGCounters. n="RGCounters" t="staticObject">
+<DSThroughputCounter ml="32" rw="RW" t="string" v=""></DSThroughputCounter>
+<USThroughputCounter ml="32" rw="RW" t="string" v=""></USThroughputCounter>
+<DSPacketLossCounter ml="32" rw="RW" t="string" v=""></DSPacketLossCounter>
+<USPacketLossCounter ml="32" rw="RW" t="string" v=""></USPacketLossCounter>
+<Latency ml="32" rw="RW" t="string" v=""></Latency>
+<DNSResponseTime ml="32" rw="RW" t="string" v=""></DNSResponseTime>
+<DomainName ml="32" rw="RW" t="string" v=""></DomainName>
+</X_ALU-COM_RGCounters.>
+<X_ALU-COM_ReversePower. n="ReversePower" t="staticObject">
+<Enable rw="RW" t="boolean" v="True"></Enable>
+<Status ml="32" rw="RW" t="string" v="Off"></Status>
+<Icut rw="RW" t="unsignedInt" v="275"></Icut>
+<Ilim rw="RW" t="unsignedInt" v="850"></Ilim>
+<VoltageThreshold rw="RW" t="unsignedInt" v="900"></VoltageThreshold>
+<CurrentThreshold rw="RW" t="unsignedInt" v="900"></CurrentThreshold>
+<VoltagePercent rw="RW" t="unsignedInt" v="10"></VoltagePercent>
+<CurrentPercent rw="RW" t="unsignedInt" v="320"></CurrentPercent>
+<IntervalDetect rw="RW" t="unsignedInt" v="5"></IntervalDetect>
+<IntervalStable rw="RW" t="unsignedInt" v="10"></IntervalStable>
+<IntervalCheck rw="RW" t="unsignedInt" v="5"></IntervalCheck>
+<IntervalLimit rw="RW" t="unsignedInt" v="30"></IntervalLimit>
+<TryAgainCount rw="RW" t="unsignedInt" v="9"></TryAgainCount>
+<IntervalSlack rw="RW" t="unsignedInt" v="15"></IntervalSlack>
+</X_ALU-COM_ReversePower.>
+<X_ALU-COM_DPUReversePowerStatus. n="DPUReversePowerStatus" t="staticObject">
+<X_ALU-COM_XDSLPort1 rw="R" t="boolean" v="FALSE"></X_ALU-COM_XDSLPort1>
+<X_ALU-COM_XDSLPort2 rw="R" t="boolean" v="FALSE"></X_ALU-COM_XDSLPort2>
+<X_ALU-COM_XDSLPort3 rw="R" t="boolean" v="FALSE"></X_ALU-COM_XDSLPort3>
+<X_ALU-COM_XDSLPort4 rw="R" t="boolean" v="FALSE"></X_ALU-COM_XDSLPort4>
+</X_ALU-COM_DPUReversePowerStatus.>
+</InternetGatewayDevice.>
